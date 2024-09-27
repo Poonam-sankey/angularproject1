@@ -1,15 +1,30 @@
 
-<div class="hero-section">
-  <div class="heading">
-    <h1>ABC Temp sjdskj sdskd</h1>
-    <p>Get live information of your vehicles, save money, and see detailed reports easily!</p>
-    <button class="btn btn-primary">Get Started Today</button>
-    
-  </div>
-  <div class="vehicle-lane">
-    <img [src]= "img_url" alt="Vehicle 1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <!-- Import Google Font 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="content-wrapper">
+            <div class="heading">
+                <h1>ABC Temp sjdskj sdskd</h1>
+                <p>Get live information of your vehicles, save money, <br>and see detailed reports easily!</p>
+                <button class="btn btn-primary">Get Started Today</button>
+            </div>
+
+            <div class="vehicle-lane">
+                <img [src]="img_url" alt="Vehicle 1">
+            </div>
+        </div>
     </div>
-    <app-plan></app-plan>
-    <app-advfeatures></app-advfeatures>
-    
+</body>
+</html>
+<app-plan></app-plan>
+<app-advfeatures></app-advfeatures>
+
    
