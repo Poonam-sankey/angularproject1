@@ -1,0 +1,85 @@
+body {
+font-family: 'Open-Sans', sans-serif;
+background-color: white;
+padding: 20px;
+}
+
+.plans-container {
+display: flex;
+justify-content: space-between;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.plan-card {
+background-color: white;
+border: 1px solid #d9d9d9;
+border-radius: 0px;
+padding: 20px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+width: 48%; /* Adjusted width to allow space for both cards */
+text-align: left;
+position: relative;
+}
+
+.plan-card.most-popular {
+    background-color: #f1f4fb;
+    border: 2px solid #0A0A5F;
+    box-shadow: #666;
+}
+    
+.plan-card:not(:last-child) {
+margin-right: 20px; /* Adjust this value for more or less spacing */
+}
+
+.plan-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.plan-header h3 {
+font-size: 1.2rem;
+margin: 0;
+font-weight: 600;
+}
+
+.most-popular-badge {
+background-color: #e6b800;
+color: white;
+padding: 2px 8px;
+font-size: 0.9rem;
+border-radius: 3px;
+font-weight: 600;
+}
+
+.plan-price {
+margin-top: 10px;
+font-size: 1.1rem;
+font-weight: 400;
+color: #333;
+}
+
+.plan-details {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+font-size: 1.1rem;
+font-weight: 600;
+color: #333;
+}
+
+.plan-details span {
+font-weight: 400;
+color: #666;
+}
+
+.section-title {
+font-size: 1.4rem;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+.section-title span {
+    margin-left: 350px;
+}
