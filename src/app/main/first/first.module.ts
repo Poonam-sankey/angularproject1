@@ -6,7 +6,6 @@ import { FmsComponent } from './fms/fms.component';
 import { SlideComponent } from './slide/slide.component';
 import { GraphComponent } from './graph/graph.component';
 import { PlanComponent } from './plan/plan.component';
-import { FirstComponent } from './first/first.component';
 
 
 
@@ -18,10 +17,11 @@ import { FirstComponent } from './first/first.component';
     SlideComponent,
     GraphComponent,
     PlanComponent,
-    FirstComponent
+    
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [PlanComponent]  
 })
 export class FirstModule { }

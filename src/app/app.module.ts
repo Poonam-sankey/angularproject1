@@ -11,6 +11,8 @@ import { PricingComponent } from './header/pricing/pricing.component';
 import { CaseStudiesComponent } from './header/case-studies/case-studies.component';
 import { ContactComponent } from './header/contact/contact.component';
 import { NotFoundComponent } from './header/not-found/not-found.component';
+import { FirstModule } from "./main/first/first.module";
+import { SecondModule } from './main/second/second.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,10 @@ import { NotFoundComponent } from './header/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    FirstModule,
+    SecondModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
