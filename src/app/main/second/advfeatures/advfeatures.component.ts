@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-advfeatures',
-  templateUrl: './advfeatures.component.html',
-  styleUrl: './advfeatures.component.css'
+  selector: 'app-root',
+  templateUrl: '/app.component.html',
+  styleUrls: ['/app.component.css']
 })
-export class AdvfeaturesComponent {
+export class AppComponent {
+  title = 'Angular_Routing';
 
+  imageUrl="/assets/images/graph.svg";
 }
+
