@@ -1,13 +1,17 @@
-
-* {
+/* Reset and basic styling */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Apply font family to body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f9f9f9;
 }
+
+/* Navigation styling */
 nav {
     display: flex;
     justify-content: space-between;
@@ -16,19 +20,24 @@ nav {
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
 }
+
+/* Styling for the nav items */
 ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
+
 ul li {
     margin: 0 15px;
 }
+
 ul li a {
     text-decoration: none;
     color: black;
@@ -36,9 +45,12 @@ ul li a {
     font-size: 1rem;
     position: relative;
 }
+
+/* Hover and active state for nav items */
 ul li a:hover, ul li a.active {
     font-weight: bold;
 }
+
 ul li a.active::after {
     content: '';
     display: block;
@@ -50,6 +62,8 @@ ul li a.active::after {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* Book demo button styling */
 .book-demo {
     background-color: black;
     color: white;
@@ -62,7 +76,9 @@ ul li a.active::after {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
+    
 }
+
 .book-demo:hover {
     background-color: #333;
 }
