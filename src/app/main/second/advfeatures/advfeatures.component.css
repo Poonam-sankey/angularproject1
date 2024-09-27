@@ -1,0 +1,60 @@
+body {
+    font-family: 'Inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+.carousel-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 70px 20px;
+    padding-bottom: 0%;
+    margin: 0 10px;
+    flex: 0 0 300px; 
+    text-align:left;
+    transition: transform 0.3s ease;
+    position: relative; /* For positioning the circle */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 59px;
+    height: 59px;
+    background-color: #d9d9d9; 
+    border-radius: 50%;
+}
+.carousel-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+}
+.carousel-arrow {
+    cursor: pointer;
+    font-size: 2em;
+    user-select: none;
+    padding: 0 20px;
+}
+.book-demo {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
