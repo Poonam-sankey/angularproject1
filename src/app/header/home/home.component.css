@@ -1,49 +1,75 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section Styling */
 .hero-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #f0f0f0;
-  }
-  
-  .heading {
-    margin-bottom: 30px;
-  }
-  
-  .vehicle-lane {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  
-  .vehicle-lane img {
-    height: 400px;
-    width: 50px;
-  }
-  
-  .statistics {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .statistics .stat {
-    text-align: center;
-  }
-  
-  .statistics .stat p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .statistics .stat span {
-    display: block;
-    font-size: 14px;
-    color: #999;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  text-align: center;
+  padding: 0px;
+  background-color: #BEC3C9;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading Styling */
+.heading {
+  flex: 1;
+  text-align: left;
+  margin-left: 90px;
+}
+
+.heading h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.73px;
+  text-align: left;
+  color: black;
+}
+
+.heading p {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.05px;
+  text-align: left;
+  color: black;
+}
+
+/* Vehicle Lane Styling */
+.vehicle-lane {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.vehicle-lane img {
+  height: 400px;
+  width: 300px;
+  margin-left: 100px;
+}
+
+/* Button Styling */
+.btn-primary {
+  margin: 20px 2px;
+  width: 168px;
+  height: 40px;
+  padding: 10px 11px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  background: black;
+  cursor: pointer;
+}
