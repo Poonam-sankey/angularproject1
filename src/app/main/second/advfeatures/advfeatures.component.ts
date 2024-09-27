@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['/app.component.css']
 })
 export class AppComponent {
-  title = 'Angular_Routing';
+  title = '';
 
   imageUrl="/assets/images/graph.svg";
 }
