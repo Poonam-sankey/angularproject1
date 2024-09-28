@@ -7,9 +7,7 @@ import { FirstModule } from './first/first.module';
 
 @NgModule({
   declarations: [
-   
   
- 
   ],
   imports: [
     CommonModule,

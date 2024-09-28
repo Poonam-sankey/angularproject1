@@ -22,6 +22,6 @@ import { PlanComponent } from './plan/plan.component';
   imports: [
     CommonModule
   ],
-  exports: [PlanComponent]  
+  exports: [PlanComponent,HorizontalComponent]  
 })
 export class FirstModule { }

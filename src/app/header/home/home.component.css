@@ -34,6 +34,7 @@
   line-height: 38.73px;
   text-align: left;
   color: black;
+  
 }
 
 .heading p {
@@ -43,6 +44,7 @@
   line-height: 29.05px;
   text-align: left;
   color: black;
+  margin-right: 10px;
 }
 
 /* Vehicle Lane Styling */
@@ -53,9 +55,9 @@
 }
 
 .vehicle-lane img {
-  height: 400px;
-  width: 300px;
-  margin-left: 100px;
+  height: 600px;
+  width: 400px;
+  margin-left: 60px;
 }
 
 /* Button Styling */

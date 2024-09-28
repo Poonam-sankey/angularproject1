@@ -13,6 +13,7 @@ import { ContactComponent } from './header/contact/contact.component';
 import { NotFoundComponent } from './header/not-found/not-found.component';
 import { FirstModule } from "./main/first/first.module";
 import { SecondModule } from './main/second/second.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SecondModule } from './main/second/second.module';
     BrowserModule,
     AppRoutingModule,
     FirstModule,
-    SecondModule
+    SecondModule,
+    MainModule
 ],
   providers: [],
   bootstrap: [AppComponent]
