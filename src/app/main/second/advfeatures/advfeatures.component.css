@@ -1,60 +1,75 @@
-body {
-    font-family: 'Inter';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-}
 .carousel-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    width: 80%;
+  }
+  
+  .card-container {
+    display: flex;
     overflow: hidden;
-}
-.carousel-card {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 70px 20px;
-    padding-bottom: 0%;
+    width: 70%;
+  }
+  
+  .card {
+    flex: 0 0 30%;
     margin: 0 10px;
-    flex: 0 0 300px; 
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.5;
+    transform: scale(0.8);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
     text-align:left;
-    transition: transform 0.3s ease;
-    position: relative; /* For positioning the circle */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.circle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 59px;
-    height: 59px;
-    background-color: #d9d9d9; 
-    border-radius: 50%;
-}
-.carousel-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-   
-}
-.carousel-arrow {
+  }
+  
+  .card.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .middle-card-image {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto; /* Center align image */
+  }
+  
+  .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 0%;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
     cursor: pointer;
-    font-size: 2em;
-    user-select: none;
-    padding: 0 20px;
-}
-.book-demo {
-    margin-top: 20px;
+  }
+  
+  .demo-button {
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
-    background: black;
+    background-color: black;
     color: white;
+    border: none;
     border-radius: 5px;
-    text-align: center;
     cursor: pointer;
-}
+  }
+  
+  .demo-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      flex: 0 0 80%;
+      margin: 10px 0;
+    }
+  }
