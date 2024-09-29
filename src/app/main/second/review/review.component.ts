@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './review.component.css'
 })
 export class ReviewComponent {
-
+  title="comp2";
+  img1="/assets/images/1..jpeg";
+  img2="/assets/images/2..jpeg";
+  img3="/assets/images/3..jpeg";
 }
