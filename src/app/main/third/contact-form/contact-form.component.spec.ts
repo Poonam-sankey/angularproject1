@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HorizontalComponent } from './horizontal.component';
+import { ContactFormComponent } from './contact-form.component';
 
-describe('HorizontalComponent', () => {
-  let component: HorizontalComponent;
-  let fixture: ComponentFixture<HorizontalComponent>;
+describe('ContactFormComponent', () => {
+  let component: ContactFormComponent;
+  let fixture: ComponentFixture<ContactFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HorizontalComponent]
+      declarations: [ContactFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HorizontalComponent);
+    fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

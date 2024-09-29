@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   img_url = '/assets/images/lane.svg'
+  showAlert() {
+    alert("Thank you for getting started! We will guide you through the process.");
+  }
 
 }
 // src\assets\images\lane.svg

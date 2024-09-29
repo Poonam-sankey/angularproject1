@@ -1,85 +1,143 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
 body {
-font-family: 'Open-Sans', sans-serif;
-background-color: white;
-padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    padding: 20px;
 }
-
+ 
 .plans-container {
-display: flex;
-justify-content: space-between;
-max-width: 900px;
-margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
 }
-
+ 
 .plan-card {
-background-color: white;
-border: 1px solid #d9d9d9;
-border-radius: 0px;
-padding: 20px;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-width: 48%; /* Adjusted width to allow space for both cards */
-text-align: left;
-position: relative;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 0px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Side by side on larger screens */
+    text-align: left;
+    position: relative;
+    margin-bottom: 20px;
 }
-
+ 
 .plan-card.most-popular {
     background-color: #f1f4fb;
     border: 2px solid #0A0A5F;
     box-shadow: #666;
 }
-    
-.plan-card:not(:last-child) {
-margin-right: 20px; /* Adjust this value for more or less spacing */
-}
-
+ 
 .plan-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+ 
 .plan-header h3 {
-font-size: 1.2rem;
-margin: 0;
-font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
 }
-
+ 
 .most-popular-badge {
-background-color: #e6b800;
-color: white;
-padding: 2px 8px;
-font-size: 0.9rem;
-border-radius: 3px;
-font-weight: 600;
+    background-color: #e6b800;
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    font-weight: 600;
 }
-
+ 
 .plan-price {
-margin-top: 10px;
-font-size: 1.1rem;
-font-weight: 400;
-color: #333;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
 }
-
+ 
 .plan-details {
-display: flex;
-justify-content: space-between;
-margin-top: 20px;
-font-size: 1.1rem;
-font-weight: 600;
-color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
 }
-
+ 
 .plan-details span {
-font-weight: 400;
-color: #666;
+    font-weight: 400;
+    color: #666;
 }
-
+ 
 .section-title {
-font-size: 1.4rem;
-margin-bottom: 20px;
-font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
-
+ 
 .section-title span {
     margin-left: 350px;
+}
+ 
+/* Media Queries for responsiveness */
+ 
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .plans-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .plan-card {
+        width: 48%; /* Maintain side by side on larger tablets */
+        margin-bottom: 20px;
+    }
+ 
+    .section-title {
+        font-size: 1.2rem;
+    }
+ 
+    .section-title span {
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+}
+ 
+/* Mobile screens (less than 480px wide) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+ 
+    .plans-container {
+        flex-direction: column; /* Stack the cards vertically on mobile */
+    }
+ 
+    .plan-card {
+        width: 100%; /* Full width on mobile */
+    }
+ 
+    .plan-header h3 {
+        font-size: 1rem;
+    }
+ 
+    .plan-price, .plan-details {
+        font-size: 1rem;
+    }
+ 
+    .most-popular-badge {
+        font-size: 0.8rem;
+    }
 }

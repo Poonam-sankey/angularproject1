@@ -3,12 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Consistent font across sections */
 }
 
 /* Hero Section Styling */
 .hero-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -90px; /* Adjust this based on desired overlap */
   text-align: center;
-  padding: 0px;
+  padding: 0;
   background-color: #BEC3C9;
 }
 
@@ -16,8 +20,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 /* Heading Styling */
@@ -28,23 +33,18 @@
 }
 
 .heading h1 {
-  font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  line-height: 38.73px;
-  text-align: left;
+  line-height: 1.2;
   color: black;
-  
 }
 
 .heading p {
-  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 400;
-  line-height: 29.05px;
-  text-align: left;
+  line-height: 1.2;
   color: black;
-  margin-right: 10px;
+  margin-right: 10px; /* Ensure there's space */
 }
 
 /* Vehicle Lane Styling */
@@ -52,12 +52,12 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Enable wrapping for mobile */
 }
 
 .vehicle-lane img {
-  height: 600px;
+  height: 500px;
   width: 400px;
-  margin-left: 60px;
 }
 
 /* Button Styling */
@@ -68,10 +68,148 @@
   padding: 10px 11px;
   border-radius: 10px;
   color: white;
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 19.36px;
   background: black;
   cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .vehicle-lane img {
+    height: 300px;
+    width: auto; /* Maintain aspect ratio */
+    margin: 10px;
+  }
+
+  .btn-primary {
+    width: 100%; /* Full-width button */
+    margin: 10px 0; /* Adjust margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 28px;
+  }
+
+  .heading p {
+    font-size: 20px;
+  }
+
+  .vehicle-lane img {
+    height: 300px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  .heading p {
+    font-size: 18px;
+  }
+
+  .vehicle-lane {
+    flex-direction: column; /* Stack images vertically */
+  }
+
+  .vehicle-lane img {
+    height: 200px;
+    width: auto;
+  }
+
+  .btn-primary {
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+/* Statistics Section Styling */
+.statistics-section {
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+  
+}
+
+.statistics-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 20px;
+  color: #000000;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .statistics-wrapper {
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+
+  .stat-box {
+    width: 45%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistics-wrapper {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+
+  .stat-box h2 {
+    font-size: 24px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-box h2 {
+    font-size: 20px;
+  }
+
+  .stat-box p {
+    font-size: 12px;
+  }
 }

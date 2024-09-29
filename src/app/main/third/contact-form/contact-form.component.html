@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Google Font 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact-form.component.css">
+    <title>Contact Form</title>
+</head> 
+<body> 
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="container"> 
+            <!-- Contact Form -->
+            <div class="contact-container">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+                    <!-- Contact Us Header with Link -->
+                    
+                        <h2>Contact Us</h2>
+                 
+                    <input formControlName="name" type="text" placeholder="Name" class="form-control" />
+                    <input formControlName="email" type="email" placeholder="Email" class="form-control" />
+                    <input formControlName="contactNumber" type="text" placeholder="Contact Number" class="form-control" />
+                    <input formControlName="fleetSize" type="text" placeholder="Fleet Size" class="form-control" />
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            
+                <!-- Information Section -->
+                <div class="info-section">
+                    <h3>Why Contact Us</h3>
+                    <p>how we will reach out</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

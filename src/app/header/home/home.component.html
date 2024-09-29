@@ -7,14 +7,15 @@
     <title>Hero Section</title>
     <!-- Import Google Font 'Inter' -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.component.css">
 </head>
 <body>
     <div class="hero-section">
         <div class="content-wrapper">
             <div class="heading">
-                <h1>ABC Temp sjdskj sdskd</h1>
-                <p>Get live information of your vehicles, save money, <br>and see detailed reports easily!</p>
-                <button class="btn btn-primary">Get Started Today</button>
+                <h1>ABC Temp sjdskj sdskd</h1><br>
+                <p>Get live information of your vehicles, save money, and see detailed reports easily!</p>
+                <button class="btn btn-primary" (click)="showAlert()">Get Started Today</button>
             </div>
 
             <div class="vehicle-lane">
@@ -22,10 +23,35 @@
             </div>
         </div>
     </div>
+  <!-- Statistics Section -->
+  <section class="statistics-section">
+    <div class="statistics-wrapper">
+      <div class="stat-box">
+        <h2>2.8L+</h2>
+        <p>Users</p>
+      </div>
+      <div class="stat-box">
+        <h2>7L+</h2>
+        <p>Vehicles</p>
+      </div>
+      <div class="stat-box">
+        <h2>2B+</h2>
+        <p>Actions</p>
+      </div>
+      <div class="stat-box">
+        <h2>1800+</h2>
+        <p>Representatives</p>
+      </div>
+    </div>
+  </section>  
 </body>
 </html>
-<app-horizontal></app-horizontal>
+
+<app-fms></app-fms>
+<app-slide></app-slide>
 <app-plan></app-plan>
 <app-advfeatures></app-advfeatures>
+<app-contact-form></app-contact-form>
+<app-footer></app-footer>
 
    

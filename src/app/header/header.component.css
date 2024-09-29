@@ -1,84 +1,86 @@
-/* Reset and basic styling */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Apply font family to body */
+/* Base styles for the navigation bar */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navigation styling */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: white; /* Light background */
 }
 
 .logo {
+    font-weight: 600;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
 }
 
-/* Styling for the nav items */
 ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 ul li a {
     text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 1rem;
-    position: relative;
+    color:#000000; /* Dark text color */
 }
 
-/* Hover and active state for nav items */
-ul li a:hover, ul li a.active {
-    font-weight: bold;
-}
-
-ul li a.active::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Book demo button styling */
 .book-demo {
-    background-color: black;
+    padding: 0.5rem 1rem;
+    background-color:#000000; /* Button color */
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
     text-decoration: none;
-    
+    border-radius: 5px;
 }
 
-.book-demo:hover {
-    background-color: #333;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .book-demo {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    ul {
+        gap: 0.5rem;
+    }
+
+    .book-demo {
+        padding: 0.5rem;
+    }
 }

@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container Styling */
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%; /* Adjusted for layout balance */
+}
+
+.contact-form h2 {
+    color: #001d4a;
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: #001d4a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00143b;
+}
+
+/* Information Section Styling */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%; /* Adjusted for layout balance */
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+}
+
+.info-section h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.info-section p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-form, .info-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+
+    .info-section h3 {
+        font-size: 22px;
+    }
+
+    .info-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form h2, .info-section h3 {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        font-size: 12px;
+    }
+
+    .info-section p {
+        font-size: 12px;
+    }
+}

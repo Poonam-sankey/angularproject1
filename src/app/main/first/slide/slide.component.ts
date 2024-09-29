@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './slide.component.css'
 })
 export class SlideComponent {
-
+  graphImg_url="/assets/images/stacked-graph.png"
 }
