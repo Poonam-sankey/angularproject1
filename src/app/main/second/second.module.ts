@@ -15,7 +15,7 @@ import { AdvfeaturesComponent } from './advfeatures/advfeatures.component';
   imports: [
     CommonModule
   ],
-  exports: [AdvfeaturesComponent] 
+  exports: [AdvfeaturesComponent,ReviewComponent] 
   
 })
 export class SecondModule { }

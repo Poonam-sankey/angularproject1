@@ -24,6 +24,7 @@ export class AdvfeaturesComponent {
       title: 'Vehicle Health Monitoring',
       description: 'Reduce Downtime with preventive maintenance alerts and diagnostics'
     }
+    
   ];
 
   activeIndex = 1;
