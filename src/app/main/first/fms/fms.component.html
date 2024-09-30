@@ -1,35 +1,30 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fms.component.css"> 
-</head> 
-<body> 
-    <!-- Main Section -->
-     <section class="main-section">
-        <div class="container"> 
-            <!-- Text Content -->
-            <div class="text-content">
-                <h2>FMS: The future of managing your vehicles!</h2>
-                <p>
-                    It is trusted by top companies to help vehicle owners work smarter, save time, and get better results. 
-                    With powerful tools and expert support, we make managing fleets easy and efficient.
-                </p>
-            </div>
-
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fms.component.css">
+</head>
+<body>
+<!-- Main Section -->
+<section class="main-section">
+<div class="container">
+<!-- Text Content -->
+<div class="text-content">
+<h2>{{ htitle }}</h2>
+<p>
+                    {{ para }}
+</p>
+</div>
+ 
             <!-- Logo Grid -->
-            <div class="logo-grid">
-                <div class="logo-box">Logo</div>
-                <div class="logo-box">Logo</div>
-                <div class="logo-box">Logo</div>
-                <div class="logo-box">Logo</div>
-                <div class="logo-box">Logo</div>
-                <div class="logo-box">Logo</div>
-            </div>
-        </div>
-    </section>
+<div class="logo-grid">
+<div class="logo-box" *ngFor="let logo of logos">
+                    {{ logo }}
+</div>
+</div>
+</div>
+</section>
 </body>
 </html>

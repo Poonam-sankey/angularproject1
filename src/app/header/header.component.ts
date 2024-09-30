@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BookService } from '../Services/book.service';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

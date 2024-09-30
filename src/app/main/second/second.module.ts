@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ReviewComponent } from './review/review.component';
 import { AdvfeaturesComponent } from './advfeatures/advfeatures.component';
+import { BookDemoComponent } from './book-demo/book-demo.component';
 
 
 
@@ -11,11 +12,12 @@ import { AdvfeaturesComponent } from './advfeatures/advfeatures.component';
   declarations: [
     ReviewComponent,
     AdvfeaturesComponent,
+    BookDemoComponent,
   ],
   imports: [
     CommonModule
   ],
-  exports: [AdvfeaturesComponent,ReviewComponent] 
+  exports: [AdvfeaturesComponent,ReviewComponent,BookDemoComponent] 
   
 })
 export class SecondModule { }

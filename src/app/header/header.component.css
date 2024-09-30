@@ -35,6 +35,11 @@ ul li a {
     color:#000000; /* Dark text color */
 }
 
+ul li a:hover ,ul li .active{
+    border-bottom: 2px solid black;
+}
+
+
 .book-demo {
     padding: 0.5rem 1rem;
     background-color:#000000; /* Button color */
@@ -65,7 +70,7 @@ ul li a {
     }
 
     .book-demo {
-        /* width: 100%; */
+        width: 100%;
         text-align: center;
         margin-top: 1rem;
     }
