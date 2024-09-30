@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { BookService } from '../../../Services/book.service';
 
 @Component({
   selector: 'app-advfeatures',
   templateUrl: './advfeatures.component.html',
-  styleUrl: './advfeatures.component.css'
+  styleUrl: './advfeatures.component.css',
+  providers:[BookService]
 })
 export class AdvfeaturesComponent {
   img_url="/assets/images/graph.svg"
@@ -35,5 +37,13 @@ export class AdvfeaturesComponent {
 
   moveRight() {
     this.activeIndex = (this.activeIndex + 1) % this.cards.length;
+  }
+  constructor( private subBook:BookService)
+  {
+
+  }
+  OnBookClicked()
+  {
+    this.subBook. OnBookClicked();
   }
 }

@@ -1,38 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import Google Font 'Inter' -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="contact-form.component.css">
-    <title>Contact Form</title>
-</head> 
-<body> 
-    <!-- Main Section -->
-    <section class="main-section">
-        <div class="container"> 
-            <!-- Contact Form -->
-            <div class="contact-container">
-                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-                    <!-- Contact Us Header with Link -->
-                    
-                        <h2>Contact Us</h2>
-                 
-                    <input formControlName="name" type="text" placeholder="Name" class="form-control" />
-                    <input formControlName="email" type="email" placeholder="Email" class="form-control" />
-                    <input formControlName="contactNumber" type="text" placeholder="Contact Number" class="form-control" />
-                    <input formControlName="fleetSize" type="text" placeholder="Fleet Size" class="form-control" />
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
-            
-                <!-- Information Section -->
-                <div class="info-section">
-                    <h3>Why Contact Us</h3>
-                    <p>how we will reach out</p>
-                </div>
-            </div>
+<div class="container">
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <input
+        formControlName="name"
+        type="text"
+        placeholder="Name"
+        [(ngModel)]="contactData.name"
+      />
+      <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)">
+          <small class="error">Valid Name is required.</small>
         </div>
-    </section>
-</body>
-</html>
+      <input
+        formControlName="email"
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="contactData.email"
+      />
+      <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+          <small class="error">Valid Email is required.</small>
+        </div>
+      <input
+        formControlName="contactNumber"
+        type="tel"
+        placeholder="Contact Number"
+        [(ngModel)]="contactData.contactNumber"
+      />
+      <div *ngIf="contactForm.get('contactNumber')?.invalid && (contactForm.get('contactNumber')?.touched || contactForm.get('contactNumber')?.dirty)">
+          <small class="error">Valid Contact Number is required.</small>
+        </div>
+      <input
+        formControlName="fleetSize"
+        type="number"
+        placeholder="Fleet Size"
+        [(ngModel)]="contactData.fleetSize"
+      />
+      <div *ngIf="contactForm.get('fleetSize')?.invalid && (contactForm.get('emfleetSizeail')?.touched || contactForm.get('fleetSize')?.dirty)">
+          <small class="error">Valid Fleet Size is required.</small>
+        </div>
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+  </div>
+
+  <div class="info-container">
+    <div class="info-box">
+      <h2>Why contact Us</h2>
+      <h3>how we will reach out</h3>
+      <p *ngIf="submitted">
+        Name: {{ contactData.name }} <br />
+        Email: {{ contactData.email }} <br />
+        Contact Number: {{ contactData.contactNumber }} <br />
+        Fleet Size: {{ contactData.fleetSize }}
+      </p>
+    </div>
+  </div>
+</div>
+
+ 

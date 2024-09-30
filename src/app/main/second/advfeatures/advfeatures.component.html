@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </head>
+<body>
+<h1>Advanced Features</h1>
 <div class="carousel-container">
-    <button class="arrow left-arrow" (click)="moveLeft()">◀</button>
+ 
+    <button class="arrow-left" (click)="moveLeft()"><</button>
     <div class="card-container">
       <div class="card" *ngFor="let card of cards; let i = index" [class.active]="i === activeIndex">
         <div class="icon">{{ card.icon }}</div>
@@ -8,6 +18,8 @@
         <img *ngIf="i === 1" [src]="img_url" alt="Middle Card Image" class="middle-card-image">
       </div>
     </div>
-    <button class="arrow right-arrow" (click)="moveRight()">▶</button>
+    <button class="arrow-right" (click)="moveRight()">></button>
   </div>
-  <button type="button" class="demo-button">Book a demo</button>
+  <button type="button" class="demo-button" (click)="OnBookClicked()">Book a demo</button>
+  </body>
+  </html>
