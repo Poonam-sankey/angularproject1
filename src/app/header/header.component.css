@@ -1,91 +1,77 @@
-/* Base styles for the navigation bar */
-body {
-    font-family: 'Inter', sans-serif;
+* {
     margin: 0;
     padding: 0;
-}
-
-nav {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Inter, sans-serif;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: white; /* Light background */
-}
-
-.logo {
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-ul {
-    list-style: none;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .nav-links {
     display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-ul li {
-    display: inline;
-}
-
-ul li a {
-    text-decoration: none;
-    color:#000000; /* Dark text color */
-}
-
-ul li a:hover ,ul li .active{
-    border-bottom: 2px solid black;
-}
-
-
-.book-demo {
-    padding: 0.5rem 1rem;
-    background-color:#000000; /* Button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .nav-item.active {
+    font-weight: bold;
+  }
+  
+  .demo-btn button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
     }
-
-    ul {
-        flex-direction: column;
-        width: 100%;
+  
+    .nav-links {
+      flex-direction: column;
     }
-
-    ul li {
-        width: 100%;
+  
+    .nav-item {
+      margin: 10px 0;
     }
-
-    ul li a {
-        display: block;
-        padding: 0.5rem 1rem;
+  
+    .demo-btn {
+      margin-top: 15px;
     }
-
-    .book-demo {
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.25rem;
-    }
-
-    ul {
-        gap: 0.5rem;
-    }
-
-    .book-demo {
-        padding: 0.5rem;
-    }
-}
+  }
+  

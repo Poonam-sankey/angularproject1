@@ -9,16 +9,23 @@
     <link rel="stylesheet" href="header.component.css">
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="logo">ABC Testing</div>
-        <ul >
-            <li><a routerLink="home" class="active">Home</a></li>
-            <li><a routerLink="features">Features</a></li>
-            <li><a routerLink="pricing">Pricing</a></li>
-            <li><a routerLink="case-studies">Case Studies</a></li>
-            <li><a routerLink="contact">Contact</a></li>
+        <ul class="nav-links">
+          <li
+            *ngFor="let item of navItems; let i = index"
+            class="nav-item"
+            [class.active]="i === activeIndex"
+            (click)="setActive(i)"
+            [routerLink]="getRouterLink(item)"
+            routerLinkActive="active">
+            {{ item }}
+          </li>
         </ul>
-        <a  class="book-demo"  (click)="OnBookClicked()">Book a demo</a>
-    </nav>
+        <div class="demo-btn">
+          <button>Book a demo</button>
+        </div>
+        <div class="underline" #underline></div>
+      </nav>
 </body>
 </html>
