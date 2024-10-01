@@ -1,142 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: white;
-    margin-left: 60px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Sliders Section */
-  .sliders-section {
-    flex: 1;
-    max-width: 45%;
-    margin-right: 20px;
-  }
-  
-  h1 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-weight: 700;
-    color: black;
-  }
-  
-  h2 {
-    margin-bottom: 15px;
-    font-size: 17px;
-    font-weight: 700;
-    color: black;
-  }
-  
-  .slider-container {
-    margin-bottom: 15px;
-  }
-  
-  .slider-label {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  label {
-    font-size: 14px;
-  }
-  
-  label span {
-    font-weight: 700;
-  }
-  
-  .slider {
-    width: 85%;
-    max-width: 340px;
-  }
-  
-  .calculate-btn {
-    background-color: #d9d9d9; /* Updated background color for better appeal */
-    padding: 20px 30px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    color: white; /* Updated to ensure good contrast */
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-left: 160px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  margin-left: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sliders Section */
+.sliders-section {
+  flex: 1;
+  max-width: 45%;
+  margin-right: 20px;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  color: black;
+}
+
+.slider-container {
+  margin-bottom: 15px;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 14px;
+}
+
+label span {
+  font-weight: 700;
+}
+
+.slider {
+  width: 85%;
+  max-width: 340px;
+}
+
+.calculate-btn {
+  background-color: #d9d9d9; /* Updated background color for better appeal */
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white; /* Updated to ensure good contrast */
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-left: 160px;
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 /* Hover Effect */
 .calculate-btn:hover {
-    background-color: #000000; /* Darker shade for hover effect */
-    transform: translateY(-2px); /* Slight lift effect on hover */
+  background-color: #000000; /* Darker shade for hover effect */
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-  .chart-container {
-    flex: 1;
-    display: flex;
-    margin-left: 30px;
-    margin-top: -50px;
-  }
-  
-  .chart-container img {
-    width: 100%;
-    height: auto;
-    max-width: 1000px;
-    margin-bottom: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .sliders-section {
-      max-width: 100%;
-    }
-  
-    .chart-container {
-      margin-left: 0;
-      margin-top: 20px;
-    }
-  
-    .calculate-btn {
-      margin-left: 160px;
-      display: block;
-      margin: 20px auto;
-    }
-  }
-  
- 
+.chart-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chartCard {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.chartBox {
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 3px rgba(54, 162, 235, 1);
+  background: white;
+  box-sizing: border-box;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
- 
-    .sliders-section {
-        max-width: 100%;
-        margin-right: 0; /* Remove right margin */
-    }
- 
-    .chart-container {
-        margin-left: 0; /* Remove left margin */
-        margin-top: 20px; /* Add space between the sections */
-    }
- 
-    .calculate-btn {
-        margin-left: 160px; /* Center button on smaller screens */
-        display: block; /* Ensure button is block-level */
-        margin: 20px auto; /* Center the button horizontally */
-    }
+  .container {
+    flex-direction: column;
+  }
+
+  .sliders-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .chart-container {
+    margin-top: 20px;
+  }
+
+  .calculate-btn {
+    margin-left: 0;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .chartCard {
+    width: 100%; /* Ensure the chart fills available width */
+  }
+
+  .chartBox {
+    width: 100%; /* Ensure the chart box adjusts to screen width */
+  }
 }
