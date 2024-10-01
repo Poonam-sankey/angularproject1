@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './review.component.css'
 })
 export class ReviewComponent {
-  testimonials = [
+testimonials = [
     {
       name: 'Divya Sharma | Fleet Manager | GreenLine Logistics',
       stars: 5,
@@ -28,13 +28,13 @@ export class ReviewComponent {
     {
       name: 'Sweety Mandana | Fleet Manager | GreenLine Logistics',
       stars: 4,
-      content: 'Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line. The seamless reporting features have saved our team countless hours, allowing us to focus on expanding our business. Plus, the additional dispatched jobs have opened up new revenue streams we hadn’t even anticipated.',
+      content: 'Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line. The seamless reporting features have saved our team countless hours, allowing us to focus on expanding our business.',
       img: 'assets/images/testimonial3.jpg' // Path to the image
     },
     {
       name: 'Divya Sharma | Fleet Manager | GreenLine Logistics',
       stars: 5,
-      content: 'Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line. The seamless reporting features have saved our team countless hours, allowing us to focus on expanding our business. Plus, the additional dispatched jobs have opened up new revenue streams we hadn’t even anticipated.',
+      content: 'Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line.',
       img: 'assets/images/testimonial1.jpg' // Path to the image
     },
     {
