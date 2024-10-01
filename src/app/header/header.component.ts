@@ -34,4 +34,7 @@ export class HeaderComponent implements AfterViewInit {
       this.underlineElement.nativeElement.style.width = `${activeItem.offsetWidth}px`;
     }
   }
+  OnBookClicked() {
+    alert('Thank you for Booking. You can access the book now. (using component resusability...)');  // Show alert msg
+  }
 }
