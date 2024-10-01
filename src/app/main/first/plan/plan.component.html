@@ -1,44 +1,169 @@
-<div class="section">
-    <h2 class="section-title">The perfect plan for you is:<span class="section-title-two">Other plans</span></h2>
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <div class="plans-container">
-        <!-- Most Popular Plan -->
-        <div class="plan-card" 
-             [ngClass]="{'most-popular': hoveredCard === 0}" 
-             (mouseenter)="onMouseEnter(0)" 
-             (mouseleave)="onMouseLeave()">
-            <div class="plan-header">
-                <h3>Advanced Plan: 1500/year</h3>
-                <div class="most-popular-badge" >MOST POPULAR</div>
-            </div>
-            <div class="plan-price">75,375</div>
-            <div class="plan-details">
-                <div>
-                    <span>75,375</span><br>Your savings:
-                </div>
-                <div>
-                    <span>3 months</span><br>Recover investment:
-                </div>
-            </div>
-        </div>
+body {
+    font-family: 'Open-Sans', sans-serif;
+    background-color: white;
+    padding: 20px;
+}
 
-        <!-- Basic Plan -->
-        <div class="plan-card" 
-             [ngClass]="{'most-popular': hoveredCard === 1}" 
-             (mouseenter)="onMouseEnter(1)" 
-             (mouseleave)="onMouseLeave()">
-            <div class="plan-header">
-                <h3>Basic Plan: 1500/year</h3>
-            </div>
-            <div class="plan-price">50,250</div>
-            <div class="plan-details">
-                <div>
-                    <span>50,250</span><br>Your Savings:
-                </div>
-                <div>
-                    <span>3 months</span><br>Recover investment:
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+/* Section for Title and Plans */
+.section {
+    max-width: 1100px;
+    margin: 0 auto; /* Center the section */
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: black;
+}
+
+.section-title-two {
+    display: flexbox;
+    margin-left: 280px;
+    color: black;
+}
+
+/* Container for the pricing plans */
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
+}
+
+.plan-card {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.plan-card.most-popular {
+    border: 2px solid #0A0A5F;  /* Highlight the border of the hovered card */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f1f4fb;  /* Optional: change background for hovered card */
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Plan Header Styling */
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Most Popular Badge */
+.most-popular-badge {
+    background-color: #e6b800;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Plan Price Styling */
+.plan-price {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Plan Details Section */
+.plan-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.plan-details span {
+    font-weight: 400;
+    color: #666;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .plans-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .plan-card {
+        width: 100%; /* Full width on smaller tablets */
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        text-align: center; /* Center align title */
+    }
+
+    .section-title span {
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile screens (less than 480px wide) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .plans-container {
+        flex-direction: column; /* Stack the cards vertically on mobile */
+    }
+
+    .plan-card {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .plan-header h3 {
+        font-size: 1rem;
+    }
+
+    .plan-price, .plan-details {
+        font-size: 1rem;
+    }
+
+    .most-popular-badge {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .section-title span {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+}
