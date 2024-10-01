@@ -12,67 +12,31 @@
     <h1>Hear it from the best</h1>
     <div class="inner">
       <div class="row">
-        <div class="col">
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <img [src]="" alt="">
-              <div class="name">Divya sharma | Fleet manager | GreenLine Logistics</div>
+        <ng-container *ngFor="let testimonial of currentTestimonials">
+          <div class="col">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <img [src]="testimonial.img" alt="">
+                <div class="name">{{ testimonial.name }}</div>
+              </div>
+              
+              <p>{{ testimonial.content }}</p>
             </div>
-            <div class="stars">
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line
-              .The seamless reporting features have saved our team countless hours, allowing us to
-               focus on expanding our business. Plus, the additional dispatched jobs have opened up new revenue streams we hadn't even anticipated.</p>
           </div>
-        </div>
-        <div class="col">
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <img [src]="" alt="">
-              <div class="name">Rohit sharma | Fleet manager | GreenLine Logistics</div>
-            </div>
-            <div class="stars">
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line
-              .The seamless reporting features have saved our team countless hours, allowing us to
-               focus on expanding our business. Plus, the additional dispatched jobs have opened up new revenue streams we hadn't even anticipated. </p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <img [src]="" alt="">
-              <div class="name">Sweety mandana | Fleet manager | GreenLine Logistics</div>
-            </div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Implementing the FleetEdge solution has been a game-changer for our operations. Savings on fuel, reduced idling, and unauthorized stops have had a significant impact on our bottom line
-              .The seamless reporting features have saved our team countless hours, allowing us to
-               focus on expanding our business. Plus, the additional dispatched jobs have opened up new revenue streams we hadn't even anticipated.</p>
-          </div>
-        </div>
+        </ng-container>
       </div>
+  
       <div class="nav-arrows">
-        <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
-        <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+        <button class="arrow left-arrow" (click)="onLeftArrowClick()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="arrow right-arrow" (click)="onRightArrowClick()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </div>
+  
 </body>
 </html>
  
