@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,66 +8,69 @@
     <title>Pricing Plans</title>
 </head>
 <body>
-<div class="container">
-    <div class="sliders-section">
-        <h1>Find out how much you could save with</h1>
-        <h2>Tell us a bit about your business</h2>
- 
-        <!-- Fleet Size Slider -->
-        <div class="slider-container">
+    <div class="container">
+        <div class="sliders-section">
+          <h1>Find out how much you could save with</h1>
+          <h2>Tell us a bit about your business</h2>
+      
+          <!-- Fleet Size Slider -->
+          <div class="slider-container">
             <div class="slider-label">
-                <label>Fleet size: <span>10</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
+              <label>Fleet size (1-10): <span>{{ fleetSize }}</span></label>
+              <input type="range" min="1" max="10" [value]="fleetSize" (input)="onFleetSizeChange($event)" class="slider">
             </div>
+          </div>
+      
+          <!-- Km/Day Slider -->
+          <div class="slider-container">
+            <div class="slider-label">
+              <label>Km/Day (10-10,000): <span>{{ kmPerDay }}</span></label>
+              <input type="range" min="10" max="10000" [value]="kmPerDay" (input)="onKmPerDayChange($event)" class="slider">
+            </div>
+          </div>
+      
+          <!-- Avg KM/L Slider -->
+          <div class="slider-container">
+            <div class="slider-label">
+              <label>Avg KM/L (1-10): <span>{{ avgKmPerL }}</span></label>
+              <input type="range" min="1" max="10" [value]="avgKmPerL" (input)="onAvgKmPerLChange($event)" class="slider">
+            </div>
+          </div>
+      
+          <!-- Hourly Wages Slider -->
+          <div class="slider-container">
+            <div class="slider-label">
+              <label>Hourly Wages (10-1000): <span>{{ hourlyWages }}</span></label>
+              <input type="range" min="10" max="1000" [value]="hourlyWages" (input)="onHourlyWagesChange($event)" class="slider">
+            </div>
+          </div>
+      
+          <!-- Daily Deliveries Slider -->
+          <div class="slider-container">
+            <div class="slider-label">
+              <label>Daily Deliveries (1-1000): <span>{{ dailyDeliveries }}</span></label>
+              <input type="range" min="1" max="1000" [value]="dailyDeliveries" (input)="onDailyDeliveriesChange($event)" class="slider">
+            </div>
+          </div>
+      
+          <!-- Working Hours Slider -->
+          <div class="slider-container">
+            <div class="slider-label">
+              <label>Working hours (1-24): <span>{{ workingHours }}</span></label>
+              <input type="range" min="1" max="24" [value]="workingHours" (input)="onWorkingHoursChange($event)" class="slider">
+            </div>
+          </div>
+      
+          <!-- Calculate Button -->
+          <button class="calculate-btn">Calculate</button>
         </div>
- 
-        <!-- Km/Day Slider -->
-        <div class="slider-container">
-            <div class="slider-label">
-                <label>Km/Day: <span>10,000</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
-            </div>
+      
+        <!-- Chart Section -->
+        <div class="chart-container">
+          <img [src]="graphImg_url" alt="Graph">
         </div>
- 
-        <!-- Avg KM/L Slider -->
-        <div class="slider-container">
-            <div class="slider-label">
-                <label>Avg KM/L: <span>10</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
-            </div>
-        </div>
- 
-        <!-- Hourly Wages Slider -->
-        <div class="slider-container">
-            <div class="slider-label">
-                <label>Hourly Wages: <span>1000</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
-            </div>
-        </div>
- 
-        <!-- Daily Deliveries Slider -->
-        <div class="slider-container">
-            <div class="slider-label">
-                <label>Daily Deliveries: <span>1000</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
-            </div>
-        </div>
- 
-        <!-- Working Hours Slider -->
-        <div class="slider-container">
-            <div class="slider-label">
-                <label>Working hours: <span>10</span></label>
-                <input type="range" min="1" max="24" class="slider" value="6">
-            </div>
-        </div> 
-        <!-- Calculate Button -->
-        <button class="calculate-btn">Calculate</button>
-    </div>
-    <!-- Chart Section -->
-    <div class="chart-container">
-        <img [src]="graphImg_url" alt="Graph">
-    </div>
-</div>
+      </div>
+      
 </body>
 </html>
  
