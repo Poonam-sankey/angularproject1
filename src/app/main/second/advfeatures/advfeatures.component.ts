@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { BookService } from '../../../Services/book.service';
 
 @Component({
   selector: 'app-advfeatures',
   templateUrl: './advfeatures.component.html',
-  styleUrl: './advfeatures.component.css',
-  providers:[BookService]
+  styleUrl: './advfeatures.component.css'
 })
 export class AdvfeaturesComponent {
   img_url="/assets/images/graph.svg"
@@ -38,12 +36,7 @@ export class AdvfeaturesComponent {
   moveRight() {
     this.activeIndex = (this.activeIndex + 1) % this.cards.length;
   }
-  constructor( private subBook:BookService)
-  {
-
-  }
-  OnBookClicked()
-  {
-    this.subBook. OnBookClicked();
+ OnBookClicked() {
+    alert('Thank you for Booking. You can access the book now. (using component resusability...)');  // Show alert msg
   }
 }
