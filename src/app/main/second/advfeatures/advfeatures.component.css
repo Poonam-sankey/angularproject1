@@ -5,24 +5,15 @@
   position: relative;
   width: 100%; /* Full width */
 }
-
+ 
 .card-container {
   display: flex;
   overflow: hidden;
   width: 80%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container */
   margin-top: 50px;
-  transition: width 0.3s ease; /* Smooth transition for width changes */
 }
-
-/* Demo Button Styling */
-.demo-button {
-  display: block;
-  margin-left: 650px; /* Push the button to the right */
-  margin-right: 20px; /* Add some space on the right */
-}
-
-/* Arrow Styling */
+ 
 .arrow-left,
 .arrow-right {
   background: none; /* No fill color */
@@ -36,29 +27,28 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 0 20px; /* Space between arrows and cards */
+  margin: 0 50px 0px 50px; /* Space between arrows and cards */
   transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
-
+ 
 .arrow-left:hover,
 .arrow-right:hover {
   background: #f0f0f0; /* Light gray on hover */
   color: #307FE2; /* Darker blue for arrows on hover */
   border-color: #307FE2; /* Darker blue border on hover */
 }
-
+ 
 h1 {
   font-family: 'Open Sans';
   font-weight: 700;
   font-size: 24px;
-  text-align: left; /* Left-align the title */
-  margin-left: 20px;
+  text-align: left; /* Center the title */
+  margin-left: 120px;
   margin-top: 30px;
 }
-
-/* Card Styling */
+ 
 .card {
-  flex: 0 0 30%; /* Make the card take 30% of the container */
+  flex: 0 0 30%;
   margin: 0 10px;
   transition: transform 0.5s, opacity 0.5s;
   opacity: 0.5;
@@ -66,100 +56,41 @@ h1 {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Add padding for better spacing */
+  padding-left: 20px; /* Add padding for better spacing */
   text-align: left;
 }
-
+ 
 .card.active {
   opacity: 1;
   transform: scale(1);
 }
-
+ 
 .middle-card-image {
   width: 120px;
   height: 130px;
   display: block;
   margin: 0 auto; /* Center align image */
 }
-
+ 
 .icon {
   font-size: 40px;
   margin-bottom: 10px;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  /* Tablets and medium screens */
-  .card-container {
-    width: 90%; /* Increase width for better spacing */
-  }
-  .card {
-    flex: 0 0 45%; /* Make the card take 45% of the container */
-    margin: 0 5px; /* Reduce margin between cards */
-  }
-  .arrow-left,
-  .arrow-right {
-    width: 40px;
-    height: 40px;
-    font-size: 20px; /* Smaller arrows */
-    margin: 0 10px; /* Less spacing around arrows */
-  }
-  h1 {
-    font-size: 20px;
-    margin-left: 15px;
-  }
-}
-
+ 
+ 
 @media (max-width: 768px) {
-  /* Mobile screens */
   .card-container {
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Full width on small screens */
-    margin-top: 20px; /* Reduce top margin */
   }
-
   .card {
-    flex: 0 0 80%; /* Each card takes up more space */
-    margin: 10px 0; /* Vertical spacing between cards */
-    transform: scale(1); /* No scaling on small screens */
-    opacity: 1; /* Make all cards fully visible */
-  }
-
-  .arrow-left,
-  .arrow-right {
-    width: 35px; /* Smaller width */
-    height: 35px; /* Smaller height */
-    font-size: 18px; /* Smaller font size */
-    margin: 0 5px; /* Reduce margin between arrows */
-  }
-
-  .demo-button {
-    margin: 20px auto; /* Center button on small screens */
-    display: flex;
-    justify-content: center;
-  }
-
-  h1 {
-    text-align: center; /* Center the title */
-    font-size: 18px; /* Smaller font size */
-    margin-left: 0; /* Remove left margin */
+    flex: 0 0 80%;
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
-  /* Small mobile screens */
-  .card {
-    flex: 0 0 90%; /* Cards take up 90% of container */
-    padding: 15px; /* Reduce padding */
-  }
-
-  .middle-card-image {
-    width: 100px; /* Smaller image */
-    height: 110px; /* Smaller height */
-  }
-
-  .icon {
-    font-size: 30px; /* Smaller icons */
-  }
+.demo-button {
+  margin: 20px auto; /* Center button on small screens */
+  display: flex;
+  justify-content: center;
 }

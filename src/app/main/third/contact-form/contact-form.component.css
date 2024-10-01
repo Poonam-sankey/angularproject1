@@ -22,7 +22,6 @@ input {
     margin-left: 40px;
     border: 1px solid #307fe2;
     border-radius: 4px;
- 
 }
  
 button {
@@ -33,6 +32,12 @@ button {
     border: none;
     border-radius: 4px;
     margin: 20px 60px 50px 40px;
+    cursor: pointer; /* Default cursor */
+}
+ 
+button:disabled {
+    background-color: grey; /* Grey background when disabled */
+    cursor: not-allowed; /* Not allowed cursor when disabled */
 }
  
 .info-container {
@@ -47,13 +52,13 @@ button {
     text-align: left;
     height: 290px;
     width: 38%;
- 
 }
  
 p {
     padding-left: 30px;
     padding-bottom: 70px;
 }
+ 
 .error {
     color: red;
     font-size: 14px;
@@ -61,7 +66,7 @@ p {
 }
  
 .info-box h2 {
-    font-family: "Inter",sans-serif;
+    font-family: "Inter", sans-serif;
     margin-left: 30px;
     margin-top: 30px;
     font-size: 24px;
@@ -69,12 +74,10 @@ p {
 }
  
 h3 {
-    font-family: "Inter",sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 20px 30px 5px 30px;
     font-size: 16px;
     font-weight: 700;
- 
- 
 }
  
 /* Media Queries for Responsiveness */

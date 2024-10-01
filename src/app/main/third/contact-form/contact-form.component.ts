@@ -29,9 +29,6 @@ export class ContactFormComponent  {
     if (this.contactForm.valid) {
       this.submitted = true;
       this.contactData = this.contactForm.value;
-   
     }
- 
- 
   }
 }
