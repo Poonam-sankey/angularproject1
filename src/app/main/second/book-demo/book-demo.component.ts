@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-book-demo',
   templateUrl: './book-demo.component.html',
@@ -7,5 +9,11 @@ import { Input } from '@angular/core';
 })
 export class BookDemoComponent{
 
-    @Input() buttonText: string = 'Book a Demo';
+    buttonText: string = 'Book a Demo';
+ 
+  @Output() bookClicked: EventEmitter<void> = new EventEmitter<void>();
+ 
+  onButtonClick() {
+    this.bookClicked.emit();  // Emit the event when the button is clicked
+  }
 }
