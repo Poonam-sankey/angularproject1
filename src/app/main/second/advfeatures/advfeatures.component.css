@@ -77,20 +77,6 @@ h1 {
   margin-bottom: 10px;
 }
  
-.demo-button {
-  display: block;
-  margin: 40px auto;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
- 
-.demo-button:hover {
-  background-color: black;
-}
  
 @media (max-width: 768px) {
   .card-container {
